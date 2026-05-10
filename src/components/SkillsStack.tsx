@@ -95,7 +95,7 @@ const skillsData = [
 
 export function SkillsStack() {
   return (
-    <section id="skills" className="bg-surface/50 py-16 md:py-24 relative z-20 border-y border-stroke">
+    <section id="skills" className="bg-surface/50 backdrop-blur-md py-16 md:py-24 relative z-20 border-y border-stroke">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -112,13 +112,13 @@ export function SkillsStack() {
              Technologies and tools I use to design, build, and ship systems.
           </p>
         </motion.div>
-
+ 
         {/* Marquee Rows */}
         <div className="flex flex-col gap-12 mb-24">
           {marqueeRows.map((row, idx) => (
             <div key={idx} className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-muted ml-1">{row.title}</span>
-              <div className="py-6 border-y border-stroke/20 bg-surface/10 rounded-2xl overflow-hidden">
+              <div className="py-6 border-y border-stroke/20 bg-surface/10 backdrop-blur-sm rounded-2xl overflow-hidden">
                 <LogoLoop
                   logos={row.logos}
                   speed={row.speed}
@@ -134,10 +134,10 @@ export function SkillsStack() {
             </div>
           ))}
         </div>
-
+ 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10">
             {skillsData.map((section) => (
-                <div key={section.cat} className="group relative bg-surface/30 border border-stroke p-1 rounded-2xl transition-colors">
+                <div key={section.cat} className="group relative bg-surface/30 border border-stroke p-1 rounded-2xl transition-colors overflow-hidden">
                     <GlowingEffect
                       blur={0}
                       borderWidth={3}
@@ -147,7 +147,7 @@ export function SkillsStack() {
                       proximity={64}
                       inactiveZone={0.01}
                     />
-                    <div className="relative z-10 bg-bg/80 group-hover:bg-bg transition-colors p-5 rounded-[12px] h-full">
+                    <div className="relative z-10 bg-bg/80 backdrop-blur-md group-hover:bg-bg/60 transition-colors p-5 rounded-[12px] h-full">
                         <h3 className="text-sm uppercase tracking-[0.2em] text-muted mb-4 pb-2 border-b border-stroke/50">{section.cat}</h3>
                         <div className="flex flex-wrap gap-2">
                             {section.items.map(item => (

@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         {/* CTA */}
-        <a href="mailto:sarwannandhofficial672007@gmail.com" className="group relative rounded-full text-base sm:text-lg outline-none overflow-hidden mb-24 md:mb-32">
+        <a href="mailto:sarwan.biz.67@gmail.com" className="group relative rounded-full text-base sm:text-lg outline-none overflow-hidden mb-24 md:mb-32">
             <span className="absolute inset-0 bg-gradient-to-r from-[#89AACC] to-[#4E85BF] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0 animate-gradient-shift bg-[length:200%_auto]" />
             <div className="relative z-10 bg-surface group-hover:bg-bg px-8 py-4 rounded-full m-[1.5px] transition-colors border border-stroke group-hover:border-transparent">
                  Send an email

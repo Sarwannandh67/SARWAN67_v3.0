@@ -170,7 +170,7 @@ export function SocialShowcase() {
           <div className="w-12 h-px bg-stroke/50" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-4">
           {socialLinks.map((social, index) => (
             <motion.a
               key={social.name}
@@ -181,7 +181,7 @@ export function SocialShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className={`group relative flex flex-col p-6 bg-surface/30 border border-stroke rounded-2xl hover:bg-surface/50 transition-all duration-300 overflow-hidden ${social.isPlaceholder ? 'cursor-not-allowed grayscale opacity-60' : ''}`}
+              className={`group relative flex flex-col p-4 md:p-6 bg-surface/30 border border-stroke rounded-2xl hover:bg-surface/50 transition-all duration-300 overflow-hidden ${social.isPlaceholder ? 'cursor-not-allowed grayscale opacity-60' : ''}`}
             >
               {/* Radial glow background */}
               {!social.isPlaceholder && (
@@ -193,21 +193,21 @@ export function SocialShowcase() {
                 />
               )}
               
-              <div className="flex items-start justify-between mb-8">
+              <div className="flex items-start justify-between mb-6 md:mb-8">
                 <div 
-                   className="p-3 rounded-xl transition-all duration-300 group-hover:scale-110"
+                   className="p-2 md:p-3 rounded-xl transition-all duration-300 group-hover:scale-110"
                    style={{ backgroundColor: `${social.color}15`, color: social.color }}
                 >
                   {social.customIcon || social.icon}
                 </div>
-                <div className="text-[10px] text-muted/40 uppercase tracking-widest translate-y-1">
+                <div className="text-[10px] text-muted/40 uppercase tracking-widest translate-y-1 hidden sm:block">
                   {social.isPlaceholder ? 'Soon' : 'Connect'} {!social.isPlaceholder && <ExternalLink size={10} className="inline ml-1" />}
                 </div>
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-text-primary mb-1">{social.name}</h3>
-                <p className="text-xs text-muted font-mono truncate">{social.handle}</p>
+                <h3 className="text-sm md:text-lg font-medium text-text-primary mb-1">{social.name}</h3>
+                <p className="text-[10px] md:text-xs text-muted font-mono truncate">{social.handle}</p>
               </div>
 
               {/* Bottom line accent */}
