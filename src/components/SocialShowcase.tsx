@@ -170,7 +170,7 @@ export function SocialShowcase() {
           <div className="w-12 h-px bg-stroke/50" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {socialLinks.map((social, index) => (
             <motion.a
               key={social.name}
