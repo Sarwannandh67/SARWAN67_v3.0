@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
 import gsap from "gsap";
+import { ArrowRight } from "lucide-react";
 import { Navbar } from "./Navbar";
 
 const roles = ["Student", "Entrepreneur", "Trader", "Investor", "Director"];
@@ -137,17 +138,19 @@ export function Hero() {
                 I am Sarwan Thondamalla—an 18-year-old venture builder, software engineer, and systems thinker. I build companies, engineer technology, and allocate capital.
             </p>
 
-            <div className="blur-in flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto px-6 sm:px-0">
-                <button onClick={() => scrollTo("ventures")} className="group relative rounded-full text-sm px-7 py-3.5 hover:scale-105 transition-all outline-none bg-text-primary text-bg hover:bg-bg hover:text-text-primary overflow-hidden w-full sm:w-auto">
-                    <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#89AACC] to-[#4E85BF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 animate-gradient-shift bg-[length:200%_auto]" />
-                    <span className="absolute inset-[1.5px] rounded-full bg-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
-                    <span className="relative z-10 font-medium whitespace-nowrap">Explore my work</span>
+            <div className="blur-in flex flex-row items-center justify-center gap-3 w-full sm:w-auto px-2 sm:px-0">
+                <button 
+                  onClick={() => scrollTo("ventures")} 
+                  className="group relative flex items-center justify-center gap-2 rounded-full text-[13px] sm:text-sm px-5 sm:px-8 py-3 sm:py-3.5 transition-all outline-none bg-text-primary text-bg font-medium whitespace-nowrap"
+                >
+                    Explore my work <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </button>
                 
-                <button onClick={() => scrollTo("contact")} className="group relative rounded-full text-sm px-7 py-3.5 hover:scale-105 transition-all outline-none border-2 border-stroke bg-bg text-text-primary hover:border-transparent overflow-hidden w-full sm:w-auto">
-                    <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#89AACC] to-[#4E85BF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 animate-gradient-shift bg-[length:200%_auto]" />
-                     <span className="absolute inset-[2px] rounded-full bg-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
-                    <span className="relative z-10 font-medium whitespace-nowrap">Get in touch</span>
+                <button 
+                  onClick={() => scrollTo("contact")} 
+                  className="group relative flex items-center justify-center rounded-full text-[13px] sm:text-sm px-5 sm:px-8 py-3 sm:py-3.5 transition-all outline-none border border-stroke bg-surface/20 text-text-primary hover:bg-surface/40 font-medium whitespace-nowrap backdrop-blur-sm"
+                >
+                    Get in touch
                 </button>
             </div>
         </div>
